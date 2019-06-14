@@ -1,0 +1,11 @@
+<app-add-car (onAddCar)="updateCarList($event)"></app-add-car>
+<hr />
+
+<app-car *ngFor="let car of cars" [carItem]="car"></app-car>
+
+<hr>
+
+<!-- <input type="text" class="form-control" (input)="onKeyUp($event)" /> -->
+<input type="text" class="form-control" #myInput (keyup.enter)="onKeyUp(myInput.value)" />
+<input type="text" class="form-control" [(ngModel)]="inputValue" />
+{{inputValue}}
