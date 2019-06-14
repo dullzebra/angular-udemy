@@ -26,4 +26,8 @@ export class CarsComponent {
   updateCarList(newCar: { name: string, year: number }) {
     this.cars.push(newCar);
   }
+
+  changeCarName() {
+    this.cars[0].name = 'hahaha'
+  }
 }

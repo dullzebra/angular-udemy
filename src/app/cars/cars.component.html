@@ -1,8 +1,12 @@
 <app-add-car (onAddCar)="updateCarList($event)"></app-add-car>
 <hr />
 
-<app-car *ngFor="let car of cars" [carItem]="car"></app-car>
+<app-car *ngFor="let car of cars" [carItem]="car">
+  <div class="alert alert-info" #alert>Алерт</div>
+</app-car>
 
+<hr>
+<button class="btn btn-success" (click)="changeCarName()">Изменить имя</button>
 <hr>
 
 <!-- <input type="text" class="form-control" (input)="onKeyUp($event)" /> -->
